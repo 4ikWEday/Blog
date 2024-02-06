@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1 class="py-3">{% block title %}Новый пост{% endblock %}</h1>
+{% endblock %}
+
+
+{% block content %}
+    <form method="post" style="max-width: 600px;">
+        <label for="title" class="form-label">Заголовок</label>
+        <input type="text" name="title" id="title" class="form-control mb-3" value="{{ request.form['title'] }}" required>
+        <label for="body" class="form-label">Текст</label>
+        <textarea name="body" id="body" class="form-control mb-3" style="height: 250px; resize: none;">
+            {{ request.form['body'] }}
+        </textarea>
+        <input type="submit" class="btn btn-success" value="Сохранить">
+    </form>
+{% endblock %}
+
+

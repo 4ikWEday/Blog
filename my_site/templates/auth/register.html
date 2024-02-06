@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1 class="py-3">{% block title %}Регистрация{% endblock %}</h1>
+{% endblock %}
+
+
+{% block content %}
+<form method="post" style="max-width: 600px;">
+    <label for="username" class="form-label">Имя Пользователя</label>
+    <input name="username" id="username" class="form-control mb-3" required>
+    <label for="password" class="form-label">Пароль</label>
+    <input type="password" name="password" id="password" class="form-control mb-3" required>
+    <input type="submit" class="btn btn-success" value="Зарегистрироваться">
+</form>
+{% endblock %}
